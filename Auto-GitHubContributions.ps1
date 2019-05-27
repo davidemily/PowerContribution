@@ -34,8 +34,9 @@ try {
     Start-Sleep -s 3
     Write-Host "Successfully pulled repository"
     $fileName = get-randomString
+    $fileName = $fileName + ".md"
     Write-Host "About to create file $fileName.."
-    echo "Made by AutoContribute" >> $fileName
+    echo "Made with :heart: by PowerContribution" >> $fileName
     Write-Host "$fileName created"
     Start-Sleep 3
     git add .
@@ -43,6 +44,15 @@ try {
     Start-Sleep 3
     git push --set-upstream $Repository master
     Write-Host "Pushed to repository successfully"
+    Start-Sleep 3
+    rm $fileName
+    Write-Host "Removing created file.."
+    Start-Sleep 3
+    git add .
+    Start-Sleep 1
+    git commit -m "removing $filename"
+    Start-Sleep 3
+    git push 
     Start-Sleep 3
 }
 catch {
