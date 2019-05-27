@@ -1,2 +1,2 @@
 # PowerContribution
-Automate github contribution through PowerShell
+Automate GitHub contribution through the use of PowerShell
